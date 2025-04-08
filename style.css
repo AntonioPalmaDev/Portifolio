@@ -1,0 +1,539 @@
+:root {
+    --roxo: #7C3AED;
+    --preto: #0F0F0F;
+    --branco: #FFFFFF;
+    --roxoescuro: #530ecb;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: var(--preto);
+    color: var(--branco);
+    line-height: 1.6;
+    transition: background-color 1s ease, color 1s ease;
+  }
+ 
+
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+  }
+
+  h1, h2 {
+    color: var(--roxo);
+    font-size: 50px;
+    text-align: center;
+  }
+/* Menu Navegação*/
+
+
+.conteiner{
+
+max-width: 1200px;
+padding: 0 20px;
+margin: 0 auto;
+}
+
+nav{
+display: flex;
+justify-content:center;
+align-items: center;
+height: 80px;
+
+
+}
+.logo{
+
+height: 100px;
+
+}
+.menu{
+
+  list-style: none;
+  display: flex;
+  gap:30px;
+
+}
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: var(--roxo);
+}
+
+.hamburguer{
+
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+
+}
+.hamburguer span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--branco);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.tema-toggle {
+  background-color: var(--branco);
+  border: none;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.tema-toggle:hover {
+  background-color: var(--roxo);
+  transform: scale(1.05);
+}
+.tema-toggle .icone {
+  transition: transform 0.3s ease;
+}
+.tema-toggle.trocando .icone {
+  transform: rotate(360deg);
+}
+
+/*tela principal*/
+
+
+  .bemvindo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 20px;
+  }
+.conteiner-flex{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* só por segurança */
+  gap: 40px;
+}
+.conteiner-bemvindo{
+  flex: 1;
+  max-width: 600px;
+ 
+}
+  .bemvindo h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #8a2be2;
+  
+  }
+
+  .bemvindo p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+   
+  }
+  .bemvindo-img{
+    background-color: var(--roxo);
+    flex: 1;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+   
+  }
+  .bemvindo-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+  
+  
+  }
+  .bemvindo-btn{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--roxo);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    width: 250px;
+  }
+
+  .btn:hover {
+    background-color: var(--roxoescuro);
+  }
+
+/* Sobre mim*/
+
+.sobremim{
+
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  justify-content: center;
+  text-align: center;     
+  padding: 20px;          
+}
+.sobremim p {
+
+text-align: justify;
+font-size: 20px;
+
+}
+
+
+/* Habilidades tecnicas*/
+
+
+    .habilidades{
+      display: flex;
+      flex-direction: column;  
+      justify-content: center;
+      text-align: center;     
+      padding: 20px;   
+
+    }
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  
+  }
+
+  .skill {
+    display: flex;
+    background-color: #1A1A1A;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  
+    gap: 5px;
+    transition: 0.3 easy;
+  }
+  .skill:hover{
+
+    background-color: var(--roxo);
+    transform: scale(1.10)
+
+  }
+
+
+  /* Projetos */
+
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .project {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    padding: 1rem;
+    transform: scale(0.95); 
+  transition: transform 0.3s ease;
+    
+  }
+  .project:hover{
+
+    transform: scale(1.05)
+  }
+  .project:hover .projects {
+    transform: scale(0.95); 
+  }
+
+  .project h3 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .project p{
+
+    text-align: justify;
+  }
+
+  .project a {
+    color: var(--roxo);
+    text-decoration: none;
+  }
+.project img{
+
+  width: 100%;        
+  height: auto;       
+  display: block;    
+  border-radius: 8px; 
+  object-fit: cover;  
+}
+/* footer   */
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  font-size: 28px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #8a2be2; /* Roxinho estiloso */
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+/*    scroll to top    */
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  background-color: var(--roxoescuro); 
+  color: white;
+  border: none;
+  padding: 14px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: none; /* começa escondido */
+  transition: all 0.3s ease;
+}
+#scrollTopBtn img{
+
+  width: 30px;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--roxo);
+  transform: scale(1.1);
+}
+
+
+/* RESPONSIVIDADE  */
+
+  @media (max-width: 768px) {
+    .conteiner-flex {
+      flex-direction: column;
+    align-items: center;
+    text-align: center;
+      
+    }
+  
+    .conteiner-bemvindo,
+    .bemvindo-img {
+      width: 100%;
+      order: 2;
+    }
+  
+    .bemvindo-img {
+      order: 1;
+      width: 200px; 
+      height: 200px;
+    }
+  
+    .bemvindo-img img {
+      height: 100%;
+    }
+  
+    .bemvindo-btn {
+      padding-top: 30px;
+    }
+
+    .hamburguer {
+      display: flex;
+    }
+  
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 10px;
+      background-color: #111;
+      padding: 1rem;
+      border-radius: 10px;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+    }
+    .menu.ativo {
+      display: flex;
+    }
+    
+  
+    .menu li a {
+      color: white;
+    }
+    .tema-toggle{
+
+      margin-left: 0;
+    }
+
+    .sobremim{
+      padding: 20px 10px;
+
+
+    }
+    #scrollTopBtn {
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 14px;
+    }
+ 
+}
+  
+
+/* MODO  TEMA  */
+body.dark {
+  background-color: var(--branco);
+  color: var(--preto);
+}
+body.dark .menu li a {
+  color: black; 
+}
+body.dark .menu li a:hover {
+  color: var(--roxoescuro); 
+}
+
+body.dark .skill{
+  background-color: var(--branco);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+
+}
+body.dark .skill:hover{
+background-color: var(--roxo);
+
+}
+body.dark .project{
+  background-color: var(--branco);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  
+}
+body.dark .bemvindo-img{
+  border: 5px solid rgb(0, 0, 0);
+
+}
+body.dark .tema-toggle{
+
+  background-color: var(--preto);
+
+}
+body.dark .tema-toggle:hover{
+
+  background-color: var(--roxoescuro);
+  
+}
+
+
+/*   ANIMAÇÔES    */
+
+.fade-in {
+  opacity: 0; /* começa invisível */
+  animation: fadeIn 1s ease forwards; /* anima por 1 segundo */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* termina visível */
+  }
+}
+
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--preto); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--roxo); 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--roxoescuro); 
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
